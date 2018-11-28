@@ -110,8 +110,7 @@ handled by that function.
 
 ### Body Mixin
 
-The `fetch` API includes a _mixin_, or additional code, called
-[Body][body],
+The `fetch` API includes a _mixin_, or additional code, called [Body][body],
 which has functions that specialize in transforming the `body` of a request or
 response.
 
@@ -131,11 +130,10 @@ prove to the API who we are when we make requests.
 
 ### OAuth
 
-GitHub's API uses [OAuth2][oauth2] for
-authorization. In a production setting, you would register an application with
-GitHub and receive an application ID and secret. This allows GitHub to track and
-monitor API access, and ensure that its users are protected by only granting
-authorization through registered apps.
+GitHub's API uses [OAuth2][oauth2] for authorization. In a production setting,
+you would register an application with GitHub and receive an application ID and
+secret. This allows GitHub to track and monitor API access, and ensure that its
+users are protected by only granting authorization through registered apps.
 
 From there, a user would make a request via your app, which would kick off the
 workflow to issue an authorization code that your app would then exchange for an
@@ -143,8 +141,7 @@ access token. The access token is ultimately what your application includes in
 GitHub API requests to identify and authorize the user.
 
 Setting up the full OAuth2 authorization code grant workflow is beyond the scope
-of this lesson, but it is described well in the GitHub
-[docs](https://developer.github.com/v3/oauth/).
+of this lesson, but it is described well in the GitHub [docs][oauth2].
 
 Fortunately for us, GitHub also allows you to generate your own personal
 authorization token that we can use to give us authorized access to the API. And
@@ -159,7 +156,7 @@ even if someone were to gain access to this page on your account, they still
 couldn't see your tokens.
 
 Using the token to [access the
-API](https://developer.github.com/v3/oauth/#3-use-the-access-token-to-access-the-api)
+API][api]
 is a simple matter of creating an `Authorization` header with our request. Let's
 try it out by listing our repos.
 
@@ -203,5 +200,6 @@ securely in a database and not exposed to other people.
 [body]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Body
 [tokens]: https://github.com/settings/tokens
 [oauth2]: https://developer.github.com/v3/oauth/
+[api]: https://developer.github.com/v3/oauth/#3-use-the-access-token-to-access-the-api
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/javascript-fetch'>Getting Data from the Web</a> on Learn.co and start learning to code for free.</p>
